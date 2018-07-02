@@ -1,0 +1,73 @@
+services:
+  app.filter.form.search:
+    parent: api_platform.doctrine.orm.search_filter
+    arguments:
+      - id: exact
+        uuid: exact
+        owner: exact
+        ownerUuid: exact
+        identity: exact
+        identityUuid: exact
+    tags:
+      - { name: api_platform.filter, id: app.form.search }
+
+  app.filter.form.search_translation:
+    parent: ds_translation.doctrine.orm.filter.search
+    arguments:
+      - title: partial
+    tags:
+      - { name: api_platform.filter, id: app.form.search_translation }
+
+  app.filter.form.date:
+    parent: api_platform.doctrine.orm.date_filter
+    arguments:
+      - createdAt: ~
+        updatedAt: ~
+        deletedAt: ~
+    tags:
+      - { name: api_platform.filter, id: app.form.date }
+
+  app.filter.form.order:
+    parent: api_platform.doctrine.orm.order_filter
+    arguments:
+      - id: ~
+        createdAt: ~
+        updatedAt: ~
+        deletedAt: ~
+        owner: ~
+        identity: ~
+    tags:
+      - { name: api_platform.filter, id: app.form.order }
+
+  app.filter.form_association.search:
+    parent: api_platform.doctrine.orm.search_filter
+    arguments:
+      - id: exact
+        uuid: exact
+        owner: exact
+        ownerUuid: exact
+        entity: exact
+        entityUuid: exact
+    tags:
+      - { name: api_platform.filter, id: app.form_association.search }
+
+  app.filter.form_association.date:
+    parent: api_platform.doctrine.orm.date_filter
+    arguments:
+      - createdAt: ~
+        updatedAt: ~
+        deletedAt: ~
+    tags:
+      - { name: api_platform.filter, id: app.form_association.date }
+
+  app.filter.form_association.order:
+    parent: api_platform.doctrine.orm.order_filter
+    arguments:
+      - id: ~
+        createdAt: ~
+        updatedAt: ~
+        deletedAt: ~
+        owner: ~
+        entity: ~
+    tags:
+      - { name: api_platform.filter, id: app.form_association.order }

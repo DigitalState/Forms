@@ -1,0 +1,6 @@
+services:
+  app.repository.form:
+    class: AppBundle\Repository\FormRepository
+    factory: ['@doctrine.orm.default_entity_manager', getRepository]
+    arguments:
+      - AppBundle\Entity\Form

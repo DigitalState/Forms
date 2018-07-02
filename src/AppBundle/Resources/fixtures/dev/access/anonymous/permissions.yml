@@ -1,0 +1,20 @@
+fixtures:
+  - access: 869cf9ed-1d2c-4ef7-9f40-624430a0bfda # Anonymous
+    scope: owner
+    entity: BusinessUnit
+    entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    key:
+      - form
+      - form_uuid
+      - form_type
+      - form_config
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope: ~
+  entity: ~
+  entity_uuid: ~
+  key: ~
+  attributes: []
+  tenant: e5a2120d-6bf7-4c58-a900-bac1e55e986b # Tenant 1

@@ -1,0 +1,23 @@
+parameters:
+  app: forms
+  discovery_host: api.discovery.ds
+  database_host: forms_database
+  database_port: 5432
+  database_name: forms
+  database_user: forms
+  database_password: forms
+  redis_host: forms_redis
+  redis_name: 10
+  redis_prefix: ''
+  jwt_private_key_path: '%kernel.root_dir%/../var/jwt/key'
+  jwt_public_key_path: '%kernel.root_dir%/../var/jwt/key.pub'
+  jwt_key_pass_phrase: ''
+  jwt_token_ttl: 3600
+  mailer_transport: smtp
+  mailer_host: 127.0.0.1
+  mailer_user: ~
+  mailer_password: ~
+  secret: secret
+  cors_allow_origin: '*'
+  system_username: system
+  system_password: '$2y$12$eRsfIkAoZjP8zjsy9znbGOKjKgrjp8.riM3cRZ3f5xepZsioE3UYO'
