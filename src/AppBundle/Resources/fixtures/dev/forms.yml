@@ -9,7 +9,7 @@ fixtures:
       path: pothole-report
       tags: [pothole]
       components: forms/formio/components/pothole-report.json
-      submission_access: forms/formio/submission_access/anonymous.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
 
   - uuid:
     type: formio
@@ -21,7 +21,7 @@ fixtures:
       path: pothole-report-review
       tags: [pothole]
       components: forms/formio/components/pothole-report-review.json
-      submission_access: forms/formio/submission_access/anonymous.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
 
 prototype:
   uuid: ~

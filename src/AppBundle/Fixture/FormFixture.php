@@ -67,12 +67,12 @@ abstract class FormFixture extends ResourceFixture
                         }
                     }
 
-                    if (property_exists($config, 'submission_access')) {
-                        if (is_string($config->submission_access)) {
-                            $config->submission_access = json_decode(file_get_contents(dirname(str_replace('{env}', $env, $this->getResource())).'/'.$config->submission_access));
+                    if (property_exists($config, 'submissionAccess')) {
+                        if (is_string($config->submissionAccess)) {
+                            $config->submissionAccess = json_decode(file_get_contents(dirname(str_replace('{env}', $env, $this->getResource())).'/'.$config->submissionAccess));
                             $submissionAccess = [];
 
-                            foreach ($config->submission_access as $access) {
+                            foreach ($config->submissionAccess as $access) {
                                 foreach ($access->roles as $key => $value) {
                                     foreach ($roles as $role) {
                                         if ($role->getMachineName() === $value) {
@@ -85,7 +85,7 @@ abstract class FormFixture extends ResourceFixture
                                 $submissionAccess[] = $access;
                             }
 
-                            $config->submission_access = $submissionAccess;
+                            $config->submissionAccess = $submissionAccess;
                         }
                     }
 

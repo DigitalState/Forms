@@ -33,7 +33,7 @@ class ValidValidator extends ConstraintValidator
      */
     protected function validateFormio(array $config, Constraint $constraint)
     {
-        foreach (['title', 'display', 'type', 'name', 'path', 'components'] as $attribute) {
+        foreach (['title', 'display', 'type', 'name', 'path', 'components', 'submissionAccess'] as $attribute) {
             if (!array_key_exists($attribute, $config)) {
                 $this->context
                     ->buildViolation($constraint->missing)
