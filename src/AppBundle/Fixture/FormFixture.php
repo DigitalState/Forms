@@ -19,6 +19,12 @@ abstract class FormFixture extends ResourceFixture
     public function load(ObjectManager $manager)
     {
         $env = $this->container->get('kernel')->getEnvironment();
+
+        // @todo create mock server instead of skipping fixture
+        if ('test' === $env) {
+            return;
+        }
+
         $configService = $this->container->get('ds_config.service.config');
         $service = $this->container->get('ds_api.api')->get('formio.authentication');
         $user = new FormioUser;
