@@ -1,6 +1,6 @@
 services:
-  app.event_listener.form.type.formio:
-    class: AppBundle\EventListener\Form\Type\FormioListener
+  app.event_listener.entity.form.type.formio:
+    class: AppBundle\EventListener\Entity\Form\Type\FormioListener
     arguments:
       - '@service_container'
     tags:

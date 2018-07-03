@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\EventListener\Form\Type;
+namespace AppBundle\EventListener\Entity\Form\Type;
 
 use ApiPlatform\Core\Bridge\Symfony\Validator\Exception\ValidationException as ApiPlatformValidationException;
 use AppBundle\Entity\Form;
@@ -83,7 +83,7 @@ class FormioListener
 
             foreach ($exception->getErrors() as $error) {
                 $message = $error->message;
-                $path = 'data.'.$error->path;
+                $path = 'config.'.$error->path;
                 $template = '%s: %s';
                 $parameters = [$path, $message];
                 $root = '';
@@ -94,6 +94,5 @@ class FormioListener
             $list = new ConstraintViolationList($violations);
             throw new ApiPlatformValidationException($list, 'An error occurred', 0, $exception);
         }
-
     }
 }
