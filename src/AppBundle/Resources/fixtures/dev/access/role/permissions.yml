@@ -24,6 +24,7 @@ fixtures:
     entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
     key:
       - form
+      - metadata
     attributes: [EDIT, ADD, DELETE]
 
   - access: cb5ca5eb-b460-4afd-ac5a-e456b924a03a # Manager
@@ -32,6 +33,7 @@ fixtures:
     entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
     key:
       - form_property
+      - metadata_property
     attributes: [EDIT]
 
   - access: 3fd2cd45-3ec9-4603-b696-482b500c94fd # Staff
@@ -41,6 +43,8 @@ fixtures:
     key:
       - form
       - form_property
+      - metadata
+      - metadata_property
     attributes: [BROWSE, READ]
 
   - access: ef1326dc-5fed-4e78-b380-753c510c4033 # Individual
