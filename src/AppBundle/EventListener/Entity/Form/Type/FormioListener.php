@@ -98,14 +98,15 @@ class FormioListener
         $token = $service->login($user);
         $service = $api->get('formio.form');
         $service->setHeader('x-jwt-token', $token);
+        $tenant = $form->getTenant();
         $config = (object) $form->getConfig();
         $form = new FormioForm;
         $form
             ->setTitle($config->title)
             ->setDisplay($config->display)
             ->setType($config->type)
-            ->setName($config->name)
-            ->setPath($config->path)
+            ->setName($tenant.'-'.$config->name)
+            ->setPath($tenant.'-'.$config->path)
             ->setComponents($config->components)
             ->setSubmissionAccess($config->submissionAccess);
 
