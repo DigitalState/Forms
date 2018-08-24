@@ -1,0 +1,32 @@
+fixtures:
+  - uuid: 1b89fd09-ae87-421e-875f-dafe3f034aea
+    type: formio
+    config:
+      title: Pothole Report
+      display: form
+      type: form
+      name: pothole-report
+      path: pothole-report
+      tags: [pothole]
+      components: forms/formio/components/pothole-report.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
+
+  - uuid:
+    type: formio
+    config:
+      title: Pothole Report Review
+      display: form
+      type: form
+      name: pothole-report-review
+      path: pothole-report-review
+      tags: [pothole]
+      components: forms/formio/components/pothole-report-review.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+  type: ~
+  config: {}
+  tenant: e5a2120d-6bf7-4c58-a900-bac1e55e986b # Tenant 1
