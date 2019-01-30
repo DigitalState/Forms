@@ -1,7 +1,0 @@
-services:
-  app.stat.form.count:
-    class: AppBundle\Stat\Form\CountStat
-    arguments:
-      - '@app.service.form'
-    tags:
-      - { name: ds_statistic.stat, alias: form.count }

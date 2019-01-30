@@ -1,9 +1,0 @@
-services:
-  app.event_listener.entity.form.type.formio:
-    class: AppBundle\EventListener\Entity\Form\Type\FormioListener
-    arguments:
-      - '@service_container'
-    tags:
-      - { name: doctrine.orm.entity_listener, entity: AppBundle\Entity\Form, event: postPersist }
-      - { name: doctrine.orm.entity_listener, entity: AppBundle\Entity\Form, event: postUpdate }
-      - { name: doctrine.event_listener, event: preFlush }

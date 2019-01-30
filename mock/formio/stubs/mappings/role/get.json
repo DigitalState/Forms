@@ -1,0 +1,44 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/role"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": [
+      {
+        "_id": "5c2fa80c669fcd003e58ea55",
+        "modified": "2019-01-04T18:38:04.417Z",
+        "title": "Administrator",
+        "machineName": "administrator",
+        "created": "2019-01-04T18:38:04.365Z",
+        "admin": true,
+        "default": false,
+        "description": "A role for Administrative Users."
+      },
+      {
+        "_id": "5c2fa80c669fcd003e58ea57",
+        "modified": "2019-01-04T18:38:04.503Z",
+        "title": "Anonymous",
+        "machineName": "anonymous",
+        "created": "2019-01-04T18:38:04.498Z",
+        "admin": false,
+        "default": true,
+        "description": "A role for Anonymous Users."
+      },
+      {
+        "_id": "5c2fa80c669fcd003e58ea56",
+        "modified": "2019-01-04T18:38:04.455Z",
+        "title": "Authenticated",
+        "machineName": "authenticated",
+        "created": "2019-01-04T18:38:04.451Z",
+        "admin": false,
+        "default": false,
+        "description": "A role for Authenticated Users."
+      }
+    ]
+  }
+}

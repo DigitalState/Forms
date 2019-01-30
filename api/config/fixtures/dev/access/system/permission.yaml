@@ -1,0 +1,33 @@
+objects:
+  - access: c7d70db0-f259-4cc8-8d11-3da0071fe07e # System
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: c7d70db0-f259-4cc8-8d11-3da0071fe07e # System
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: c7d70db0-f259-4cc8-8d11-3da0071fe07e # System
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: e9535b9f-7e9d-46a0-bafd-8a054d3a9f69 # Bpm
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: e9535b9f-7e9d-46a0-bafd-8a054d3a9f69 # Bpm
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: e9535b9f-7e9d-46a0-bafd-8a054d3a9f69 # Bpm
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+prototype:
+  access: ~
+  scope: generic
+  entity: ~
+  entity_uuid: ~
+  key: ~
+  attributes: []
+  tenant: e5a2120d-6bf7-4c58-a900-bac1e55e986b # Tenant 1

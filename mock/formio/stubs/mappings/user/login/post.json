@@ -1,0 +1,39 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/user/login"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "x-jwt-token": "abc"
+    },
+    "jsonBody": {
+      "_id": "57d010fe76f943a4007e11da",
+      "modified": "2016-09-07T23:11:03.165Z",
+      "data": {
+        "fullName": "Form.io Demo",
+        "name": "formiodemo",
+        "email": "demo+formio@form.io"
+      },
+      "form": "553db94e72f702e714dd9779",
+      "created": "2016-09-07T13:07:10.892Z",
+      "externalIds": [
+        {
+          "type": "hubspotContact",
+          "id": "1880164",
+          "_id": "57d0110076f943a4007e11dd",
+          "modified": "2016-09-07T23:11:03.165Z",
+          "created": "2016-09-07T13:07:12.481Z"
+        }
+      ],
+      "access": [],
+      "roles": [
+        "55cd5c3ca51a96bef99ef551",
+        null
+      ],
+      "owner": "57d010fe76f943a4007e11da"
+    }
+  }
+}

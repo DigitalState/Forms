@@ -1,4 +1,0 @@
-services:
-  app.service.form:
-    class: AppBundle\Service\FormService
-    parent: ds_entity.service.entity

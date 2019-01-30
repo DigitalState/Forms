@@ -1,0 +1,50 @@
+parameters:
+  locale: en
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  App\:
+    resource: ../src/{EventListener,Fixture,Service,Stat,Tenant,Validator}
+
+  App\Controller\:
+    resource: ../src/Controller
+    tags: [controller.service_arguments]
+
+  App\EventListener\Entity\Form\Type\FormioListener:
+    tags:
+      - { name: doctrine.orm.entity_listener, entity: App\Entity\Form, event: postPersist }
+      - { name: doctrine.orm.entity_listener, entity: App\Entity\Form, event: postUpdate }
+      - { name: doctrine.event_listener, event: preFlush }
+
+  App\Fixture\:
+    resource: ../src/Fixture
+    tags: [doctrine.fixture.orm]
+
+  App\Repository\FormRepository:
+    factory: ['@doctrine.orm.default_entity_manager', getRepository]
+    arguments:
+      - App\Entity\Form
+
+  App\Stat\Form\CountStat:
+    tags:
+      - { name: ds_statistic.stat, alias: form.count }
+
+  App\Tenant\Loader\AclLoader:
+    tags:
+      - { name: ds_tenant.loader }
+
+  App\Tenant\Loader\ConfigLoader:
+    tags:
+      - { name: ds_tenant.loader }
+
+  App\Tenant\Unloader\FormUnloader:
+    tags:
+      - { name: ds_tenant.unloader }
+
+  App\Validator\Constraints\Form\Config\ValidValidator:
+    tags:
+      - { name: validator.constraint_validator }

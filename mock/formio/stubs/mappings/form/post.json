@@ -1,0 +1,39 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/form"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "machineName": "register",
+      "modified": "2019-01-04T19:07:10.732Z",
+      "title": "Registration",
+      "display": "form",
+      "name": "register",
+      "path": "register",
+      "created": "2019-01-04T19:07:10.724Z",
+      "_id": "5c2faede669fcd003e58ea65",
+      "components": [],
+      "owner": "5c2fa80c669fcd003e58ea63",
+      "submissionAccess": [],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "57d0a03776f943a4007e1516",
+            "57d0a03776f943a4007e1515",
+            "57d0a03776f943a4007e1514"
+          ]
+        }
+      ],
+      "tags": [
+        "register"
+      ],
+      "type": "form"
+    }
+  }
+}
