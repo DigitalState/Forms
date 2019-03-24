@@ -85,9 +85,10 @@ final class Version0_15_0 extends AbstractMigration implements ContainerAwareInt
             case 'postgresql':
                 $this->addSql('CREATE SEQUENCE app_form_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
                 $this->addSql('CREATE SEQUENCE app_form_trans_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
-                $this->addSql('CREATE TABLE app_form (id INT NOT NULL, uuid UUID NOT NULL, "owner" VARCHAR(255) DEFAULT NULL, owner_uuid UUID DEFAULT NULL, type VARCHAR(255) DEFAULT NULL, config JSON NOT NULL, version INT DEFAULT 1 NOT NULL, tenant UUID NOT NULL, deleted_at TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NULL, created_at TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NULL, updated_at TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NULL, PRIMARY KEY(id))');
+                $this->addSql('CREATE TABLE app_form (id INT NOT NULL, uuid UUID NOT NULL, "owner" VARCHAR(255) DEFAULT NULL, owner_uuid UUID DEFAULT NULL, type VARCHAR(255) DEFAULT NULL, config JSON NOT NULL, data JSON NOT NULL, version INT DEFAULT 1 NOT NULL, tenant UUID NOT NULL, deleted_at TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NULL, created_at TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NULL, updated_at TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NULL, PRIMARY KEY(id))');
                 $this->addSql('CREATE UNIQUE INDEX UNIQ_57A6D8EFD17F50A6 ON app_form (uuid)');
                 $this->addSql('COMMENT ON COLUMN app_form.config IS \'(DC2Type:json_array)\'');
+                $this->addSql('COMMENT ON COLUMN app_form.data IS \'(DC2Type:json_array)\'');
                 $this->addSql('CREATE TABLE app_form_trans (id INT NOT NULL, translatable_id INT DEFAULT NULL, title VARCHAR(255) DEFAULT NULL, description TEXT DEFAULT NULL, locale VARCHAR(255) NOT NULL, PRIMARY KEY(id))');
                 $this->addSql('CREATE INDEX IDX_A57D11022C2AC5D3 ON app_form_trans (translatable_id)');
                 $this->addSql('CREATE UNIQUE INDEX app_form_trans_unique_translation ON app_form_trans (translatable_id, locale)');

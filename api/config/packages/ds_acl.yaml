@@ -15,6 +15,7 @@ ds_acl:
     form_config:                  { attributes: [BROWSE, READ, EDIT],              property: App\Entity\Form.config,       title: app.permissions.form.config                  }
     form_title:                   { attributes: [BROWSE, READ, EDIT],              property: App\Entity\Form.title,        title: app.permissions.form.title                   }
     form_description:             { attributes: [BROWSE, READ, EDIT],              property: App\Entity\Form.description,  title: app.permissions.form.description             }
+    form_data:                    { attributes: [BROWSE, READ, EDIT],              property: App\Entity\Form.data,         title: app.permissions.form.data                    }
     form_version:                 { attributes: [BROWSE, READ, EDIT],              property: App\Entity\Form.version,      title: app.permissions.form.version                 }
     form_tenant:                  { attributes: [BROWSE, READ, EDIT],              property: App\Entity\Form.tenant,       title: app.permissions.form.tenant                  }
 

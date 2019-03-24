@@ -67,6 +67,7 @@ trait Form
                 ->setOwnerUuid($object->owner_uuid)
                 ->setTitle((array) $object->title)
                 ->setDescription((array) $object->description)
+                ->setData((array) $object->data)
                 ->setType($object->type)
                 ->setTenant($object->tenant);
 

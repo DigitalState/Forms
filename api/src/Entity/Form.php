@@ -63,6 +63,7 @@ class Form implements Identifiable, Uuidentifiable, Ownable, Translatable, Local
     use Accessor\Config;
     use TranslationAccessor\Title;
     use TranslationAccessor\Description;
+    use Accessor\Data;
     use Accessor\Deleted;
     use Accessor\Version;
     use TenantAccessor\Tenant;
@@ -182,6 +183,15 @@ class Form implements Identifiable, Uuidentifiable, Ownable, Translatable, Local
     private $description;
 
     /**
+     * @var array
+     * @ApiProperty
+     * @Serializer\Groups({"form_output", "form_input"})
+     * @ORM\Column(name="data", type="json_array")
+     * @Assert\Type("array")
+     */
+    private $data;
+
+    /**
      * @var integer
      * @ApiProperty
      * @Serializer\Groups({"form_output", "form_input"})
@@ -209,5 +219,6 @@ class Form implements Identifiable, Uuidentifiable, Ownable, Translatable, Local
         $this->config = [];
         $this->title = [];
         $this->description = [];
+        $this->data = [];
     }
 }
