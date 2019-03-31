@@ -15,10 +15,7 @@ services:
           - forms_database
 
   php:
-    image: digitalstate/forms-php
-    build:
-      context: ./api
-      target: api_platform_php
+    image: digitalstate/forms:php-0.16.0
     depends_on:
       - database
     env_file:
@@ -44,10 +41,7 @@ services:
           - forms_php
 
   api:
-    image: digitalstate/forms-api
-    build:
-      context: ./api
-      target: api_platform_nginx
+    image: digitalstate/forms:api-0.16.0
     depends_on:
       - php
     networks:
