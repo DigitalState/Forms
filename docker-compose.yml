@@ -15,7 +15,7 @@ services:
           - forms_database
 
   php:
-    image: digitalstate/forms:php-0.18.1
+    image: digitalstate/forms:php-0.19.0
     depends_on:
       - database
     env_file:
@@ -44,7 +44,7 @@ services:
           - forms_php
 
   api:
-    image: digitalstate/forms:api-0.18.1
+    image: digitalstate/forms:api-0.19.0
     depends_on:
       - php
     networks:
