@@ -3,6 +3,7 @@
 namespace App\Fixture;
 
 use App\Entity\Form as FormEntity;
+use DateTime;
 use Doctrine\Common\Persistence\ObjectManager;
 use Ds\Component\Api\Api\Api;
 use Ds\Component\Config\Service\ConfigService;
@@ -70,6 +71,12 @@ trait Form
                 ->setData((array) $object->data)
                 ->setType($object->type)
                 ->setTenant($object->tenant);
+
+            if (null !== $object->created_at) {
+                $date = new DateTime;
+                $date->setTimestamp($object->created_at);
+                $form->setCreatedAt($date);
+            }
 
             switch ($object->type) {
                 case FormEntity::TYPE_FORMIO:

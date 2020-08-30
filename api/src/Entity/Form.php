@@ -94,8 +94,9 @@ class Form implements Identifiable, Uuidentifiable, Ownable, Translatable, Local
 
     /**
      * @var \DateTime
-     * @ApiProperty(writable=false)
-     * @Serializer\Groups({"form_output"})
+     * @ApiProperty
+     * @Serializer\Groups({"form_output", "form_input"})
+     * @Assert\DateTime
      */
     protected $createdAt;
 
