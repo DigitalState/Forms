@@ -35,6 +35,42 @@ objects:
       en: Description ...
       fr: Description ...
 
+  - uuid: aa6433d9-01b9-4d65-94b7-279eed5f9397
+    type: formio
+    config:
+      title: Graffiti Report
+      display: form
+      type: form
+      name: graffiti-report
+      path: graffiti-report
+      tags: [graffiti]
+      components: forms/formio/components/graffiti-report.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
+    title:
+      en: Graffiti Report
+      fr: Signaler un graffiti
+    description:
+      en: Description ...
+      fr: Description ...
+
+  - uuid: 6fc8ae28-16a8-4582-be5e-25b296862d76
+    type: formio
+    config:
+      title: Graffiti Report Review
+      display: form
+      type: form
+      name: graffiti-report-review
+      path: graffiti-report-review
+      tags: [graffiti]
+      components: forms/formio/components/graffiti-report-review.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
+    title:
+      en: Graffiti Report Review
+      fr: Examen du signalement d'un graffiti
+    description:
+      en: Description ...
+      fr: Description ...
+
 prototype:
   uuid: ~
   created_at: ~
